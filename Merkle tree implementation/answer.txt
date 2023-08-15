@@ -1,0 +1,16 @@
+1.1
+The byte will be t * L since this is list and we are storing in the list every transaction. To show the transaction, 
+it will require t times to compute because we need to check this using 1 for loops whether transaction was contained in the list
+If the transaction is simple, storing in the list is better but since real world require bunch of transaction to be happned,
+merkle tree is the option to solve memory and time problem.
+
+
+1.2
+To check transaction is contained or not, we only need rootNode and transaction(value to check contained or not).
+Since we are using the hash, we can check using membership of transaction and root. 
+
+2.1 
+To prove membership of transcation C, we just need rootNode of the tree and transcation(value to find).
+Verifier will computes only hash(hash of transaction and proof_value). EX ( H1 = Hash(Hash(transaction)||proof_value[0] and)
+H2 = Hash(H1||proof_value[1]))
+ 
